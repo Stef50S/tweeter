@@ -22,3 +22,9 @@ Back-end functionality, such as the database setup and external files, was provi
 - Express
 - Node 5.10.x or above
 - Nodemon
+
+## Screenshots
+
+!["Default layout with example tweet"](https://github.com/Stef50S/tweeter/blob/master/docs/example-tweet.png?raw=true)
+!["Page layout when screen width is less than 1024 pixels"](https://github.com/Stef50S/tweeter/blob/master/docs/smaller-screen.png?raw=true)
+!["Shadow effect when mouse hovers over a tweet"](https://github.com/Stef50S/tweeter/blob/master/docs/tweet-hover.png?raw=true)

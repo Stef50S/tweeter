@@ -1,0 +1,22 @@
+nav {
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+}
+
+p span {
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+}

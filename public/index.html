@@ -7,8 +7,27 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
 
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,300;1,700&display=swap" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav bar CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="styles/header.css" type="text/css" />
+
+    <!-- Form CSS -->
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css" />
+
+    <!-- Tweet Container CSS -->
+    <link rel="stylesheet" href="styles/tweet-container.css" type="text/css" />
+
+    <!-- Font Awesome logos -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -21,9 +40,52 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <p><span>Write</span> a new tweet</p>
     </nav>
-
+    <!-- Logged in user -->
+    <header class="current-profile">
+      <div>
+          <img src="/images/profile-hex.png" alt="Your Profile Picture"> 
+      </div>
+      <br>
+      <div>
+          <h2>Stefano Commodari</h2>
+      </div>
+    </header>
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form method="POST" action="/tweets/">
+          <label for="tweet-text">What are you humming about?
+            <textarea name="text" id="tweet-text"></textarea>
+          </label>
+          <div>
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <section class="tweet-container">
+        <article class="tweet">
+          <header class="user-info">
+            <div>
+              <img src="/images/example_profile.png" alt="User's Profile Picture">
+              <p>Newton</p>
+            </div>
+            <p class="handle">@SirIsaac</p>
+          </header>
+          <p>This tweet is a test.</p>
+          <footer>
+            <p>10 days ago</p>
+            <div class="icons">
+              <i class="fa fa-flag"></i>
+              <i class="fa fa-retweet"></i>
+              <i class="fa fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
+    </main>
   </body>
 </html>

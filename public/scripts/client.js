@@ -8,14 +8,21 @@ $(document).ready(function() {
   $('form').submit(function(event) {
     console.log("Button has been clicked, creating AJAX request.");
     event.preventDefault();
+    let $submission = $('form').serialize();
     $.ajax({
       url: '/tweets/',
       method: 'POST',
-      data: $('form').serialize(),
-      dataType: 'html'
+      data: $submission,
+      dataType: 'html',
+      error: function() { // When no text is submitted
+        if($submission.text === undefined) {
+          alert("This tweet is empty. Please enter some text.");
+        }
+      }
     })
     .then(function() {
       console.log('Success! The tweet has been sent.');
+      $('.tweet-container').empty(); // Avoid showing other tweets twice
       loadTweets();
     });
   });
@@ -68,7 +75,7 @@ $(document).ready(function() {
     paragraph.appendChild(document.createTextNode(input));
     return paragraph.innerHTML;
   }
-  
-  loadTweets();
+
+  loadTweets(); // Load tweets when user enters the page
 
 });

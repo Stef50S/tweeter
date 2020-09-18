@@ -34,3 +34,14 @@ body {
    justify-content: center;
    align-items: center;
  }
+
+ @media only screen and (min-width: 1024px) {
+   body {
+     display: flex;
+   }
+
+   .container {
+     width: 50%;
+     margin-top: 200px;
+   }
+ }

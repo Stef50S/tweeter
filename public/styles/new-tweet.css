@@ -36,3 +36,9 @@ button {
   color: white;
   border-style: none;
 }
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet h2 {
+    margin-top: 0px;
+  }
+}
